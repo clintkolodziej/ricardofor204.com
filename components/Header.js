@@ -1,3 +1,11 @@
+import styles from './Header.module.css'
+
 export default function Header({ title }) {
-  return <h1 className="title">{title}</h1>
+  return (
+    <>
+      <header className={styles.header}>
+        <h1>{title}</h1>
+      </header>
+    </>
+  )
 }
