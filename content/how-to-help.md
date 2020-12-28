@@ -20,5 +20,24 @@ How To Help
 
 - Volunteer
   ---------------
-  Contact form with name, city, and let them check boxes if they want to host an electronic meet and greet, pass out literature, write postcards, make phone calls, or let them write in an "other" box what they'd like to do? Once they hit submit can that form be e-mailed to me directly?
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 
+  <div id="volunteer-form">
+  <label htmlFor="email">Your Email:</label><input type="text" name="email" placeholder="Your Email"/>
+  <label htmlFor="subject">Subject:</label><input type="text" name="subject" placeholder="Subject"/>
+  <label htmlFor="options">I'd like to:</label><br/>
+  <div id="volunteer-options">
+    <div className="volunteer-option">
+      <input type="checkbox" name="options" value="meet"/>
+      <label htmlFor="meet">Host an electronic meet &amp; greet</label>
+    </div>
+    <div className="volunteer-option">
+      <input type="checkbox" name="options" value="literature"/>
+      <label htmlFor="literature">Pass out literature</label>
+    </div>
+  </div>
+  <label htmlFor="message">Message:</label><textarea name="message" rows="10"></textarea>
+  </div>
+
+
+  <button className="button">Send Message</button>

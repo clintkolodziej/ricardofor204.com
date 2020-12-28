@@ -10,6 +10,9 @@ VARIABLES
   --palette-3: #48a8dc; 
   --palette-4: #fda000; 
   --border-color: #eee;
+  --text-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell,
+  Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --header-family: 'Oswald', sans-serif;
 }
 
 /*
@@ -22,8 +25,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--text-family);
   scroll-behavior: smooth;
   font-size: 16px;
   line-height: 1.5;
@@ -34,7 +36,7 @@ body {
 }
 
 h1, h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--header-family);
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -45,6 +47,10 @@ h1 {
 
 h2 {
   font-size: 2em;
+}
+
+input, textarea {
+  font-size: 16px;
 }
 
 img {
@@ -66,6 +72,9 @@ section, footer {
   }
   h2 {
     font-size: 2.5em;
+  }
+  input, textarea {
+    font-size: 18px;
   }
   section, footer {
     padding: 3em 1.5em;
@@ -107,6 +116,7 @@ BUTTONS
 
 .button:hover {
   background: var(--palette-2);
+  border: 1px solid var(--palette-2);
 }
 
 .button.primary {
@@ -380,7 +390,7 @@ ISSUES
   flex-basis: 100%;
   margin-bottom: 1.5em;
   padding: 1em 2em;
-  background-color: #fbfdff;
+  background-color: rgba(249,252, 255, 0.9);
   border: 1px solid rgba(0,0,0,0.03);
   border-radius: .5em;
   box-shadow: 0 1em 1em rgba(0,0,0,0.03);
@@ -434,13 +444,13 @@ HOW TO HELP
 
 #how-to-help li {
   position: relative;
-  display: flex;
+  /*display: flex;*/
   flex: 1 0;
   flex-basis: 100%;
   flex-flow: column nowrap;
   margin-bottom: 1.5em;
   padding: 2em;
-  background-color: #fbfdff;
+  background-color: white;
   border: 1px solid rgba(0,0,0,0.03);
   border-radius: .5em;
   box-shadow: 0 1em 1em rgba(0,0,0,0.03);
@@ -460,6 +470,67 @@ HOW TO HELP
   margin: 0 auto;
   margin-top: auto;
   padding-top: 1.5em;
+  text-align: center;
+}
+
+#how-to-help input,
+#how-to-help textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: .5em;
+  border: 1px solid var(--border-color);
+}
+
+#how-to-help label {
+  color: var(--palette-1);
+  font-family: var(--header-family);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#volunteer-form {
+  text-align: left;
+}
+
+#volunteer-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: .5em;
+}
+
+.volunteer-option {
+  flex: 1;
+  flex-basis: 100%;
+}
+
+#how-to-help .volunteer-option label {
+  font-family: var(--text-family);
+  font-weight: normal;
+  text-transform: none;
+  opacity: 1;
+}
+
+#how-to-help input[type=checkbox] {
+  display: inline-block;
+  width: initial;
+  margin-right: 1em;
+  margin-bottom: 0;
+}
+
+#how-to-help input[type=checkbox] ~ label {
+  margin-right: 1em;
+}
+
+#how-to-help ::placeholder {
+  opacity: .5;
+}
+
+@media only screen and (min-width: 750px) {
+  .volunteer-option {
+    flex-basis: 50%;
+  }
 }
 
 @media only screen and (min-width: 960px) {
