@@ -27,7 +27,7 @@ export default function Home() {
 
         <ul>
 
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">About Me</a></li>
           <li><a href="#issues">Why I'm Running</a></li>
           <li><a href="#how-to-help">How To Help</a></li>
 
@@ -41,6 +41,8 @@ export default function Home() {
 
           <IntroContent />
 
+          <a id="scroller"><span></span></a>
+          
         </div>
 
       </header>
