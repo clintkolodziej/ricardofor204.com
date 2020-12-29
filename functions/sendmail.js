@@ -21,7 +21,7 @@ const mg = mailgun({apiKey: API_KEY, domain: DOMAIN});
 // Export the Netlify Function
 //
 
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
     
     //
     // Set up the email data
@@ -44,11 +44,21 @@ exports.handler = async function(event, context) {
         // If there is an error indicate an internal error and pass back the error
         //
 
-        console.log(body);
+        console.log("inline callback: " + body);
 
         return {
             statusCode: 200,
             body: JSON.stringify({error: error, message: body})
+        };
+
+    })
+    .then (data => {
+
+        console.log("promise callback: " + data);
+
+        return {
+            statusCode: 200,
+            body: JSON.stringify({message: body})
         };
 
     });
