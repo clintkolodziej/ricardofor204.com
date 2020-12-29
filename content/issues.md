@@ -5,10 +5,8 @@ date: 2019-03-17T19:31:20.591Z
 
 Why I'm Running
 ===============
-
-- COVID-19 
-  ---------------
-  While the school board doesn't decide whether students are in-person or remote, once the decision is made the board should weigh in on safety considerations, evaluate viability of substitute and teacher numbers for in-person, and research challenges and successes from neighboring districts. In time, this school board will also be responsible for leading our school out of the pandemic.
+I'm running for District 204 school board because I want to give a strong voice for equity in achievement and access to opportunity.
+---------------
 
 - Belonging & Equity 
   --------------
@@ -29,3 +27,7 @@ Why I'm Running
 - Grading 
   ---------------
   Continue to evaluate the new system using data and seek ways to improve.
+
+- COVID-19 
+  ---------------
+  While the school board doesn't decide whether students are in-person or remote, once the decision is made the board should weigh in on safety considerations, evaluate viability of substitute and teacher numbers for in-person, and research challenges and successes from neighboring districts. In time, this school board will also be responsible for leading our school out of the pandemic.

@@ -377,6 +377,18 @@ ISSUES
   color: white;
 }
 
+#issues h1 {
+  margin-bottom: .25em;
+}
+
+#issues h2 {
+  margin: 1em auto;
+  max-width: 25em;
+  margin-top: 0;
+  font-size: 1.5em;
+  color: black;
+}
+
 #issues ul {
   display: flex;
   padding: 0;
@@ -395,6 +407,12 @@ ISSUES
   border-radius: .5em;
   box-shadow: 0 1em 1em rgba(0,0,0,0.03);
   color: black;
+}
+
+#issues li h2 {
+  margin-top: inherit;
+  font-size: 1.5em;
+  color: inherit;
 }
 
 #issues li p {
@@ -440,6 +458,8 @@ HOW TO HELP
   flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 #how-to-help li {
@@ -457,6 +477,14 @@ HOW TO HELP
   color: black;
 }
 
+#how-to-help li:first-child {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  flex-basis: 25%;
+  padding-bottom: 5em;
+}
+
 #how-to-help li h2 {
   margin-top: 0;
   margin-bottom: .25em;
@@ -469,7 +497,7 @@ HOW TO HELP
 #how-to-help li p:last-child {
   margin: 0 auto;
   margin-top: auto;
-  padding-top: 1.5em;
+  padding-top: .75em;
   text-align: center;
 }
 
@@ -486,6 +514,7 @@ HOW TO HELP
   color: var(--palette-1);
   font-family: var(--header-family);
   font-weight: 500;
+  font-size: .9em;
   text-transform: uppercase;
 }
 
@@ -503,6 +532,7 @@ HOW TO HELP
 .volunteer-option {
   flex: 1;
   flex-basis: 100%;
+  font-size: .9em;
 }
 
 #how-to-help .volunteer-option label {
@@ -541,14 +571,14 @@ HOW TO HELP
     flex-basis: 40%;
     margin: 1em;
   }
+  .volunteer-option {
+    flex-basis: 50%;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
   #how-to-help ul {
     padding: 0 2em;
-  }
-  #how-to-help li {
-    /*flex-basis: 30%;*/
   }
 }
 

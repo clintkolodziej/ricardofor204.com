@@ -8,19 +8,13 @@ How To Help
 
 - Donate
   ---------------
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  Support Ricardo's run for District 204 school board. Every contribution helps us reach voters via yard signs, door hanger advertisements, social media advertisements, and potentially direct mailers. Click the Donate Today button to send a secure contribution.
 
   <a className="button" href="https://secure.actblue.com/donate/ricardo-martinez-d204board">Donate Today</a>
 
-- Contact Me
-  ---------------
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-
-  <a className="button" href="mailto:RicardoFor204@gmail.com">Contact Me</a>
-
 - Volunteer
   ---------------
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  Campaigning in 2021 will be a unique challenge, and I can't do this without you. If you believe that I would be a great addition to the D204 school board, here's how you can help:
 
   <div id="volunteer-form">
   <label htmlFor="email">Your Email:</label><input type="text" name="email" placeholder="Your Email"/>
@@ -35,8 +29,16 @@ How To Help
       <input type="checkbox" name="options" value="literature"/>
       <label htmlFor="literature">Pass out literature</label>
     </div>
+    <div className="volunteer-option">
+      <input type="checkbox" name="options" value="sign"/>
+      <label htmlFor="sign">I'll take a yard sign</label>
+    </div>
+    <div className="volunteer-option">
+      <input type="checkbox" name="options" value="other"/>
+      <label htmlFor="other">Other (See message)</label>
+    </div>
   </div>
-  <label htmlFor="message">Message:</label><textarea name="message" rows="10"></textarea>
+  <label htmlFor="message">Message:</label><textarea name="message" rows="5"></textarea>
   </div>
 
 

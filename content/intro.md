@@ -8,7 +8,6 @@ Ricardo <br/>Martinez Jr.
 ===============
 Candidate for LT <br/>District 204 School Board Full Term
 ---------------
-I'm running for District 204 school board because I want to give a strong voice for equity in achievement and access to opportunity.
 
 <a className="button" href="#about">About Me</a> <a className="button primary" href="https://secure.actblue.com/donate/ricardo-martinez-d204board">Donate Today</a>
 

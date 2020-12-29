@@ -44,8 +44,10 @@ exports.handler = async function(event, context) {
         // If there is an error indicate an internal error and pass back the error
         //
 
+        console.log(body);
+
         return {
-            statusCode: 500,
+            statusCode: 200,
             body: JSON.stringify({error: error, message: body})
         };
 
@@ -55,10 +57,10 @@ exports.handler = async function(event, context) {
     // If there was no error then return a successful status and a message indicating the message was sent
     //
 
-    return {
-        statusCode: 200,
-        body: JSON.stringify({message: "Message sent successfully."})
-    };
+    // return {
+    //     statusCode: 200,
+    //     body: JSON.stringify({message: "Message sent successfully."})
+    // };
 }
 
 
