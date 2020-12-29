@@ -46,20 +46,11 @@ exports.handler = async function(event, context, callback) {
 
         console.log("inline callback: " + body);
 
-        return {
-            statusCode: 200,
-            body: JSON.stringify({error: error, message: body})
-        };
-
-    })
-    .then (data => {
-
-        console.log("promise callback: " + data);
-
-        return {
+        callback(null, {
             statusCode: 200,
             body: JSON.stringify({message: body})
-        };
+        });
+
 
     });
 
