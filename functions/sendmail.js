@@ -50,24 +50,32 @@ exports.handler = function(event, context, callback) {
     //
 
     const text = `
-    Contact Message:\n
-    From: ${formdata.email}\n
-    Volunteer Options: ${formdata.options.join(", ")}\n
+    RicardoFor204 Contact:\n
+    From:\n
+    ${formdata.email}\n
+    \n
+    Volunteer Options:\n
+    ${formdata.options.join(", ")}\n
     \n
     Message:\n
     ${formdata.message}
     `;
 
     const html = `
-    <h2>Contact Message:</h2>
-    <b>From:</b> ${formdata.email}<br/>
-    <b>Volunteer Options:</b> ${formdata.options.join(", ")}<br/>
+    <h2>RicardoFor204 Contact:</h2>
+    <b>From:</b><br/>
+    ${formdata.email}<br/>
+    <br/>
+    <b>Volunteer Options:</b><br/>
+    ${formdata.options.join(", ")}<br/>
     <br/>
     <b>Message:</b><br/>
     <p>
     ${formdata.message}
     </p>
     `;
+
+    const subject = "RicardoFor204: " + formdata.subject
 
     //
     // Set up the email data
@@ -76,7 +84,7 @@ exports.handler = function(event, context, callback) {
     const data = {
         from: formdata.email,
         to: RECIPIENT,
-        subject: formdata.subject,
+        subject: subject,
         text: text,
         html: html
     };
