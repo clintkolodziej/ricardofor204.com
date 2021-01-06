@@ -50,11 +50,11 @@ exports.handler = function(event, context, callback) {
     //
 
     const message = `
-    Contact Message:
-    From: ${formdata.email}
-    Volunteer Options: ${formdata.options.join(", ")}
-
-    Message:
+    Contact Message:\n
+    From: ${formdata.email}\n
+    Volunteer Options: ${formdata.options.join(", ")}\n
+    \n
+    Message:\n
     ${formdata.message}
     `;
 
