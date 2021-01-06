@@ -41,15 +41,13 @@ export default function Home() {
 
           <IntroContent />
 
-          <a id="scroller"><span></span></a>
-          
+          <a id="scroller" href="#about"><span></span></a>
+
         </div>
 
       </header>
 
       <main>
-
-        {/*<Header title={title} />*/}
 
         <section id="about">
 

@@ -11,14 +11,22 @@ const mailgun = require("mailgun-js");
 exports.handler = function(event, context, callback) {
     
     //
+    // Only allow POST requests, all others return HTTP 405 (Method Not Allowed)
+    //
+
+    // if (event.httpMethod !== "POST") {
+
+    //     return { statusCode: 405, body: "Method Not Allowed" };
+
+    // }
+
+    //
     // Globals stored as environment variables
     //
 
     const DOMAIN = process.env.MG_DOMAIN;
     const API_KEY = process.env.MG_API_KEY;
-
-    console.log(API_KEY);
-    console.log(DOMAIN);
+    const RECIPIENT = process.env.RECIPIENT;
 
     //
     // Set up the mailgun object using the api key and domain
@@ -30,15 +38,23 @@ exports.handler = function(event, context, callback) {
     });
 
     //
+    // Get the data posted from the form
+    //
+    
+    const formdata = JSON.parse(event.body);
+
+    console.log(formdata);
+
+    //
     // Set up the email data
     //
      
     const data = {
-        from: 'Website Contact <contact@ricardofor204.com>',
-        to: 'clint@clintkolodziej.com',
-        subject: 'Website Contact',
-        text: 'Website Contact Test',
-        html: 'Website Contact Test'
+        from: formdata.email,
+        to: RECIPIENT,
+        subject: formdata.subject,
+        text: formdata.message,
+        html: formdata.message
     };
     
     //

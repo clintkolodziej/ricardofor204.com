@@ -198,19 +198,7 @@ INTRODUCTION
   max-width: 28em;
   padding: 10em 1.5em;
   transition: all 1s ease-in-out;
-}
-
-#intro h1 {
-  margin: 0;
-  color: #000;
-  line-height: 1;
-}
-
-#intro h2 {
-  margin: .3em 0;
-  color: #fff;
-  line-height: 1;
-  text-shadow: 0 0 2em rgba(0,0,0,0.5);
+  text-align: center;
 }
 
 #intro p {
