@@ -20,6 +20,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&display=swap" rel="stylesheet"/>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script src="/scripts/index.js"></script>
 
       </Head>
 

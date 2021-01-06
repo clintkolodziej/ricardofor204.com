@@ -75,6 +75,7 @@ section, footer {
   }
   input, textarea {
     font-size: 18px;
+    border-radius: 4px;
   }
   section, footer {
     padding: 3em 1.5em;
@@ -122,6 +123,27 @@ BUTTONS
 .button.primary {
   background: white;
   color: black;
+}
+
+/*
+========================
+ALERT
+========================
+*/
+
+.alert {
+  display: none;
+  padding: 6px 14px;
+  margin-bottom: 20px;
+  background-color: #fbfbfb;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  text-align: center;
+  font-size: .8em;
+}
+
+.alert.show {
+  display: block;
 }
 
 /*
