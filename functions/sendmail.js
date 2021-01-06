@@ -49,13 +49,24 @@ exports.handler = function(event, context, callback) {
     // Format the email message
     //
 
-    const message = `
+    const text = `
     Contact Message:\n
     From: ${formdata.email}\n
     Volunteer Options: ${formdata.options.join(", ")}\n
     \n
     Message:\n
     ${formdata.message}
+    `;
+
+    const html = `
+    <h2>Contact Message:</h2>
+    <b>From:</b> ${formdata.email}<br/>
+    <b>Volunteer Options:</b> ${formdata.options.join(", ")}<br/>
+    <br/>
+    <b>Message:</b><br/>
+    <p>
+    ${formdata.message}
+    </p>
     `;
 
     //
@@ -66,8 +77,8 @@ exports.handler = function(event, context, callback) {
         from: formdata.email,
         to: RECIPIENT,
         subject: formdata.subject,
-        text: message,
-        html: message
+        text: text,
+        html: html
     };
     
     //
