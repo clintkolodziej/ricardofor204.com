@@ -46,6 +46,19 @@ exports.handler = function(event, context, callback) {
     console.log(formdata);
 
     //
+    // Format the email message
+    //
+
+    const message = `
+    Contact Message:
+    From: ${formdata.email}
+    Volunteer Options: ${formdata.options.join(", ")}
+
+    Message:
+    ${formdata.message}
+    `;
+
+    //
     // Set up the email data
     //
      
@@ -53,8 +66,8 @@ exports.handler = function(event, context, callback) {
         from: formdata.email,
         to: RECIPIENT,
         subject: formdata.subject,
-        text: formdata.message,
-        html: formdata.message
+        text: message,
+        html: message
     };
     
     //
