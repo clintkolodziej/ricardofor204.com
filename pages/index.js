@@ -35,8 +35,8 @@ export default function Home() {
         <script src="/scripts/index.js"></script>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/> 
+
         <meta property="og:title" content="Ricardo for District 204"/>
         <meta property="og:description" content="I'm running for District 204 School Board because I want to be a strong voice for equity in achievement and advocate for access to opportunity."/>
         <meta property="og:url" content="https://ricardofor204.com/"/>
