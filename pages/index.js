@@ -16,11 +16,24 @@ export default function Home() {
       <Head>
 
         <title>Ricardo For 204</title>
-        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="icon" href="/img/favicon/favicon-32.png" sizes="32x32"/>
+        <link rel="icon" href="/img/favicon/favicon-57.png" sizes="57x57"/>
+        <link rel="icon" href="/img/favicon/favicon-76.png" sizes="76x76"/>
+        <link rel="icon" href="/img/favicon/favicon-96.png" sizes="96x96"/>
+        <link rel="icon" href="/img/favicon/favicon-128.png" sizes="128x128"/>
+        <link rel="icon" href="/img/favicon/favicon-192.png" sizes="192x192"/>
+        <link rel="icon" href="/img/favicon/favicon-228.png" sizes="228x228"/>
+        <link rel="shortcut icon" href="/img/favicon/favicon-196.png" sizes="196x196"/>
+        <link rel="apple-touch-icon" href="/img/favicon/favicon-120.png" sizes="120x120"/>
+        <link rel="apple-touch-icon" href="/img/favicon/favicon-152.png" sizes="152x152"/>
+        <link rel="apple-touch-icon" href="/img/favicon/favicon-180.png" sizes="180x180"/>
+
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&display=swap" rel="stylesheet"/>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
         <script src="/scripts/index.js"></script>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
       </Head>
 
