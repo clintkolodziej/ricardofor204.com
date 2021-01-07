@@ -140,6 +140,7 @@ ALERT
   border-radius: 4px;
   text-align: center;
   font-size: .8em;
+  color: #666;
 }
 
 .alert.show {

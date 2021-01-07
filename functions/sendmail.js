@@ -14,11 +14,11 @@ exports.handler = function(event, context, callback) {
     // Only allow POST requests, all others return HTTP 405 (Method Not Allowed)
     //
 
-    // if (event.httpMethod !== "POST") {
+    if (event.httpMethod !== "POST") {
 
-    //     return { statusCode: 405, body: "Method Not Allowed" };
+        return { statusCode: 405, body: "Method Not Allowed" };
 
-    // }
+    }
 
     //
     // Globals stored as environment variables
@@ -38,7 +38,7 @@ exports.handler = function(event, context, callback) {
     });
 
     //
-    // Get the data posted from the form
+    // Get the data posted from the form and log it for debugging purposes
     //
     
     const formdata = JSON.parse(event.body);
@@ -64,15 +64,11 @@ exports.handler = function(event, context, callback) {
     const html = `
     <h2>RicardoFor204 Contact:</h2>
     <b>From:</b><br/>
-    ${formdata.email}<br/>
-    <br/>
+    <p>${formdata.email}</p>
     <b>Volunteer Options:</b><br/>
-    ${formdata.options.join(", ")}<br/>
-    <br/>
+    <p>${formdata.options.join(", ")}</p>
     <b>Message:</b><br/>
-    <p>
-    ${formdata.message}
-    </p>
+    <p>${formdata.message}</p>
     `;
 
     const subject = "RicardoFor204: " + formdata.subject

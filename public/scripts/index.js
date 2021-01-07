@@ -51,7 +51,7 @@ async function submitContactClick() {
 
     if (response.ok) {
 
-      alert.innerText = "Your volunteer request has been successfully sent";
+      alert.innerText = "Your request has been successfully sent";
       form.reset();
 
     }
