@@ -27,8 +27,12 @@ body {
   margin: 0;
   font-family: var(--text-family);
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 10px;
   line-height: 1.5;
+}
+
+body {
+  font-size: 1.6rem;
 }
 
 * {
@@ -64,8 +68,8 @@ section, footer {
 }
 
 @media only screen and (min-width: 480px) {
-  html, body {
-    font-size: 18px;
+  body {
+    font-size: 1.8rem;
   }
   h1 {
     font-size: 4em;
@@ -154,30 +158,37 @@ NAVIGATION
 */
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1;
   text-align: right;
   font-family: 'Oswald', sans-serif;
+  font-weight: 400;
   font-size: 1em;
   text-transform: uppercase;
+  z-index: 3;
+  animation: fade-in 1s;
 }
 
 nav ul {
   display: flex;
+  align-items: center;
   margin: 0;
   justify-content: space-between;
   list-style: none;
-  padding: 2em 1.25em;
-  background: linear-gradient(180deg, rgba(0,0,0,0.2), transparent);
+  padding: 0 2em;
+  background-color: rgba(255,255,255,0.95);
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.05);
+  transition: all .4s ease-in-out, background-color .2s linear;
 }
 
 nav a {
-  color: white;
+  color: black;
   text-decoration: none;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  font-size: 1.6rem;
+  transition: text-shadow .4s ease-in-out;
 }
 
 nav a:hover {
@@ -185,17 +196,35 @@ nav a:hover {
   text-decoration: underline;
 }
 
+nav.top ul {
+  padding: 1.5em 2em;
+  background-color: transparent;
+  color: white;
+  box-shadow: none;
+  transition: all .4s ease-in-out, background-color .05s linear;
+}
+
+nav.top a {
+  color: white;
+  text-shadow: 0 3px 2px rgba(0,0,0,0.2);
+}
+
+nav.top a:hover {
+  color: var(--palette-2);
+}
+
+#navigation-logo {
+  margin-left: 0;
+  margin-right: auto;
+}
+
 @media only screen and (min-width: 640px) {
-  nav {
-    font-size: 1.125em;
-  }
   nav ul {
-    padding: 2em 3em;
     justify-content: flex-end;
   }
   
   nav li {
-    margin-left: 3em;
+    margin-left: 2.5em;
   }
 }
 
@@ -212,9 +241,21 @@ INTRODUCTION
   background-image: url(/img/intro.jpg);
   background-position: left 25% bottom 0%;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
   color: white;
   transition: background-position .25s ease-in-out;
+}
+
+#intro::after {
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(180deg, rgba(0,40,85,0.2), transparent);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  content: '';
+  z-index: 2;
 }
 
 #intro #intro-content {
@@ -222,6 +263,11 @@ INTRODUCTION
   padding: 10em 1.5em;
   transition: all 1s ease-in-out;
   text-align: center;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards; 
+  opacity: 0;
 }
 
 #intro p {
@@ -266,6 +312,17 @@ INTRODUCTION
   background-color: var(--palette-2);
   border-color: var(--palette-2);
   color: white;
+}
+
+@keyframes fade-in {
+	0% {
+    transform: translateY(-1em);
+		opacity: 0;
+	}
+  100% {
+    transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 #scroller {

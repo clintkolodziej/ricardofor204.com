@@ -30,7 +30,7 @@ export default function Home() {
         <link rel="apple-touch-icon" href="/img/favicon/favicon-180.png" sizes="180x180"/>
 
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto&display=swap" rel="stylesheet"/>
 
         <script src="/scripts/index.js"></script>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -49,10 +49,11 @@ export default function Home() {
 
       </Head>
 
-      <nav>
+      <nav id="navigation" className="top">
 
         <ul>
 
+          <li id="navigation-logo"><a href="#"><img src="/img/logo/RM-logo-icon-MAIN.svg" alt="Ricardo Martinez" height="48" width="48"/></a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#issues">Why I'm Running</a></li>
           <li><a href="#how-to-help">How To Help</a></li>
@@ -67,9 +68,9 @@ export default function Home() {
 
           <IntroContent />
 
-          <a id="scroller" href="#about"><span></span></a>
-
         </div>
+
+        <a id="scroller" href="#about"><span></span></a>
 
       </header>
 
