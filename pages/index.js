@@ -53,7 +53,7 @@ export default function Home() {
 
         <ul>
 
-          <li id="navigation-logo"><a href="#"><img src="/img/logo/RM-logo-icon-MAIN.svg" alt="Ricardo Martinez" height="48" width="48"/></a></li>
+          <li id="navigation-logo"><a href="#"><img src="/img/logo/RM-logo-icon-main-square.svg" alt="Ricardo Martinez" height="48" width="48"/></a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#issues">Why I'm Running</a></li>
           <li><a href="#how-to-help">How To Help</a></li>
