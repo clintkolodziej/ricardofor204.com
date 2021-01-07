@@ -9,7 +9,7 @@ VARIABLES
   --palette-2: #FFB81C; /* PMC-1235 */
   --palette-3: #48a8dc; 
   --palette-4: #fda000; 
-  --border-color: #eee;
+  --border-color: rgba(0,0,0,0.03);
   --text-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell,
   Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --header-family: 'Oswald', sans-serif;
@@ -153,7 +153,7 @@ ALERT
 
 /*
 ========================
-NAVIGATION
+Navigation
 ========================
 */
 
@@ -163,78 +163,179 @@ nav {
   right: 0;
   left: 0;
   z-index: 1;
-  text-align: right;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 1em;
   text-transform: uppercase;
   z-index: 3;
   animation: fade-in 1s;
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0 2em;
   background-color: rgba(255,255,255,0.95);
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.05);
   transition: all .4s ease-in-out, background-color .2s linear;
 }
 
-nav li {
-  margin-left: 1.25em;
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
 }
 
-nav a {
+nav li {
+  display: block;
+  padding: .5em 1.25em;
+  border-top: 1px solid var(--border-color);
+}
+
+nav li a {
+  display: inline-block;
   color: black;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   transition: text-shadow .4s ease-in-out, box-shadow .1s ease-in-out, opacity .25s ease-in-out;
 }
 
-nav a:hover {
+nav li a:hover {
   box-shadow: inset 0 -3px 0 0 var(--palette-2);
 }
 
-nav.top ul {
-  padding: 1.5em 2em;
-  background-color: transparent;
-  color: white;
-  box-shadow: none;
-  transition: all .4s ease-in-out, background-color .05s linear;
+@media only screen and (min-width: 640px) {
+
+  nav {
+    padding: 0 1.5em;
+  }
+
+  nav ul {
+    overflow: initial;
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  nav li {
+    float: left;
+    padding: .5em 1.25em;
+    border: 0;
+  }
+
+  nav li a {
+    padding: .3em 0;
+  }
+
+  nav.top {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    background-color: transparent;
+    color: white;
+    box-shadow: none;
+    transition: all .4s ease-in-out, background-color .05s linear;
+  }
+  
+  nav.top a {
+    color: white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  }
 }
 
-nav.top a {
-  color: white;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
-}
+/*
+========================
+Navigation Logo
+========================
+*/
 
 #navigation-logo {
-  margin-left: 0;
-  margin-right: auto;
+  margin-left: 1.25em;
+  padding: .2em 0;
+  float: left;
 }
 
 #navigation-logo img {
   display: block;
 }
 
-#navigation-logo a:hover {
+#navigation-logo:hover {
   opacity: .7;
   box-shadow: none;
 }
 
+/*
+========================
+Hamburger Menu
+========================
+*/
+
+.hamburger {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 1.5em 1em;
+  position: relative;
+  user-select: none;
+}
+
+.hamburger .hamburger-icon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.hamburger .hamburger-icon:before,
+.hamburger .hamburger-icon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.hamburger .hamburger-icon:before {
+  top: 5px;
+}
+
+.hamburger .hamburger-icon:after {
+  top: -5px;
+}
+
+.hamburger-button {
+  display: none;
+}
+
+.hamburger-button:checked ~ .menu {
+  max-height: 240px;
+}
+
+.hamburger-button:checked ~ .hamburger .hamburger-icon {
+  background: transparent;
+}
+
+.hamburger-button:checked ~ .hamburger .hamburger-icon:before {
+  transform: rotate(-45deg);
+}
+
+.hamburger-button:checked ~ .hamburger .hamburger-icon:after {
+  transform: rotate(45deg);
+}
+
+.hamburger-button:checked ~ .hamburger:not(.steps) .hamburger-icon:before,
+.hamburger-button:checked ~ .hamburger:not(.steps) .hamburger-icon:after {
+  top: 0;
+}
+
 @media only screen and (min-width: 640px) {
-  nav ul {
-    justify-content: flex-end;
-  }
-  
-  nav li {
-    margin-left: 2.5em;
+
+  .hamburger {
+    display: none;
   }
 }
+
 
 /*
 ========================
@@ -279,6 +380,7 @@ INTRODUCTION
 }
 
 #intro p {
+  font-size: .85em;
   text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
@@ -712,10 +814,7 @@ Instagram: https://uxwing.com/instagram-round-color-icon/
   background-image: url(/img/icons/instagram-round-color.svg);
 }
 
-@media only screen and (min-width: 480px) {
-  #footer {
-    padding: 3em 1.5em;
-  }
+@media only screen and (min-width: 640px) {
   #footer li a {
     margin: 0 2em;
   }

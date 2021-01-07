@@ -62,7 +62,7 @@ function scrollHandler (e) {
 function positionNavigation(scrollPosition) {
 
   // Do something with the scroll position
-  console.log(scrollPosition + " : " + navigation.getBoundingClientRect().top);
+  //console.log(scrollPosition + " : " + navigation.getBoundingClientRect().top);
 
   if (scrollPosition <= 50)
     navigation.classList.add("top");

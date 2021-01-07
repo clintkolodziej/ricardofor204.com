@@ -51,9 +51,12 @@ export default function Home() {
 
       <nav id="navigation" className="top">
 
-        <ul>
+        <a id="navigation-logo" href="#"><img src="/img/logo/RM-logo-icon-main-square.svg" alt="Ricardo Martinez" height="48" width="48"/></a>
+        <input className="hamburger-button" type="checkbox" id="hamburger-button" />
+        <label className="hamburger" htmlFor="hamburger-button"><span className="hamburger-icon"></span></label>
 
-          <li id="navigation-logo"><a href="#"><img src="/img/logo/RM-logo-icon-main-square.svg" alt="Ricardo Martinez" height="48" width="48"/></a></li>
+        <ul className="menu">
+
           <li><a href="#about">About Me</a></li>
           <li><a href="#issues">Why I'm Running</a></li>
           <li><a href="#how-to-help">How To Help</a></li>
