@@ -15,15 +15,22 @@ export default function Home() {
 
       <Head>
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDRRKBR1R7"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-BDRRKBR1R7"
+        />
 
-          gtag('config', 'G-BDRRKBR1R7');
-        </script>
-
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-BDRRKBR1R7');
+              `,
+          }}
+        />
+        
         <title>Ricardo For 204</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/> 
