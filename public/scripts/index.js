@@ -85,6 +85,41 @@ async function submitContactClick() {
   var alert = document.getElementById("volunteer-alert");
 
   //
+  // Check if form was filled out, else display an error
+  // - Email is required
+  // - Subject / Options / Message are optional
+  //
+
+  if (!form.email.checkValidity()) {
+
+    alert.classList.add("show");
+    alert.classList.add("error");
+    alert.innerText = "Please enter a valid email address";
+    return;
+
+  }
+
+  var anyOptions = false;
+
+  for (var i = 0; i < form.options.length; i++) {
+    if (form.options[i].checked) {
+      anyOptions = true;
+      break;
+    }
+  }
+
+  if (
+    form.message.value == "" && !anyOptions
+  ) {
+
+    alert.classList.add("show");
+    alert.classList.add("error");
+    alert.innerText = "Please enter a message or choose volunteer options";
+    return;
+
+  }
+
+  //
   // Get the form data and set up data for the fetch request
   //
 
@@ -108,18 +143,18 @@ async function submitContactClick() {
       body: JSON.stringify(data)
     });
 
-    console.log(response, response.status, response.ok);
-
     alert.classList.add("show");
 
     if (response.ok) {
 
+      alert.classList.add("success");
       alert.innerText = "Your request has been successfully sent";
       form.reset();
 
     }
     else {
 
+      alert.classList.add("error");
       alert.innerText = "There was an error sending your request: " + response.statusText;
 
     }
@@ -127,6 +162,7 @@ async function submitContactClick() {
   catch (error) {
 
     alert.classList.add("show");
+    alert.classList.add("error");
     alert.innerText = "There was an error sending your request: " + error;
 
   }

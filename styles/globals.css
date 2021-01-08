@@ -162,6 +162,18 @@ ALERT
   display: block;
 }
 
+.alert.success {
+  background: #efe;
+  border-color: #6c6;
+  color: #2c2;
+}
+
+.alert.error {
+  background: #fee;
+  border-color: #f88;
+  color: #c22;
+}
+
 /*
 ========================
 Navigation

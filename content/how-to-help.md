@@ -16,7 +16,7 @@ date: 2019-03-17T19:31:20.591Z
 
   <form id="volunteer-form">
     <div id="volunteer-alert" className="alert"></div>
-    <label htmlFor="email">Your Email:</label><input type="text" name="email" placeholder="Your Email"/>
+    <label htmlFor="email">Your Email:</label><input type="email" name="email" placeholder="Your Email" required/>
     <label htmlFor="subject">Subject:</label><input type="text" name="subject" placeholder="Subject"/>
     <label htmlFor="options">I'd like to:</label><br/>
     <div id="volunteer-options">
@@ -37,7 +37,7 @@ date: 2019-03-17T19:31:20.591Z
         <label htmlFor="other">Other (See message)</label>
       </div>
     </div>
-    <label htmlFor="message">Message:</label><textarea name="message" rows="5"></textarea>
+    <label htmlFor="message">Message:</label><textarea name="message" rows="5" placeholder="Please leave your address here if you are requesting a sign or feel free to enter a message"></textarea>
   </form>
 
   <button id="submit-contact" className="button">Send Message</button>
