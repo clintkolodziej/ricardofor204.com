@@ -17,6 +17,8 @@ export default function Home() {
 
         <title>Ricardo For 204</title>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/> 
+        
         <link rel="icon" href="/img/favicon/favicon-32.png" sizes="32x32"/>
         <link rel="icon" href="/img/favicon/favicon-57.png" sizes="57x57"/>
         <link rel="icon" href="/img/favicon/favicon-76.png" sizes="76x76"/>
@@ -34,8 +36,6 @@ export default function Home() {
 
         <script src="/scripts/index.js"></script>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/> 
 
         <meta property="og:title" content="Ricardo for District 204"/>
         <meta property="og:description" content="I'm running for District 204 School Board because I want to be a strong voice for equity in achievement and advocate for access to opportunity."/>

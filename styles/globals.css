@@ -62,16 +62,19 @@ img {
 }
 
 section, footer {
-  margin: 0 auto;
   padding: 1.5em 1.5em;
   border-top: 1px solid var(--border-color);
+  overflow: hidden;
 }
 
 @supports(padding: max(0px)) {
 
-  section, footer {
+  @media (orientation: landscape) {
+
+    header, section, footer {
       padding-left: max(1.5em, env(safe-area-inset-left));
       padding-right: max(1.5em, env(safe-area-inset-right));
+    }
   }
 }
 
