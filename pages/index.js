@@ -45,6 +45,7 @@ export default function Home() {
         <meta property="fb:app_id" content="app id goes here"/>
         <meta name="twitter:site" content="@board_LT"/>
 
+        <link rel="icon" href="/img/favicon/favicon-96.png"/>
         <link rel="icon" href="/img/favicon/favicon-32.png" sizes="32x32"/>
         <link rel="icon" href="/img/favicon/favicon-57.png" sizes="57x57"/>
         <link rel="icon" href="/img/favicon/favicon-76.png" sizes="76x76"/>
