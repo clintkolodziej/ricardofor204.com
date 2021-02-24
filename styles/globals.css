@@ -458,6 +458,12 @@ INTRODUCTION
   color: white;
 }
 
+#paid-for {
+  font-style: italic;
+  font-size: .85em;
+  opacity: .8;
+}
+
 @keyframes fade-in {
 	0% {
     transform: translateY(-1em);
