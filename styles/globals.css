@@ -371,7 +371,7 @@ INTRODUCTION
   display: flex;
   align-items: center;
   background-image: url(/img/intro.jpg);
-  background-position: left 25% bottom 0%;
+  background-position: left 25% top 0%;
   background-size: cover;
   background-repeat: no-repeat; 
   color: white;
@@ -525,14 +525,16 @@ INTRODUCTION
 
 @media only screen and (min-width: 480px) {
   #intro {
-    background-position: left;
+    background-position: left 25% top 20%;
   }
 }
 
 @media only screen and (min-width: 960px) {
+  /*
   #intro {
     background-position: right 0% bottom 70%;
   }
+  */
   #intro #intro-content {
     margin-left: 7.5%;
   }
@@ -540,7 +542,7 @@ INTRODUCTION
 
 @media only screen and (min-width: 1280px) {
   #intro {
-    background-position: right 0% bottom 60%;
+    background-position: right 0% top 20%;
   }
   #intro #intro-content {
     margin-left: 10%;
