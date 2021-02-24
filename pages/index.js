@@ -74,6 +74,7 @@ export default function Home() {
 
         <ul className="menu">
 
+          <li><a id="nav-donate" href="https://secure.actblue.com/donate/ricardo-martinez-d204board">Donate</a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#issues">Why I'm Running</a></li>
           <li><a href="#how-to-help">How To Help</a></li>
